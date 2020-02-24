@@ -23,4 +23,8 @@ extern const public_key base;
 void csidh_private(private_key *priv);
 bool csidh(public_key *out, public_key const *in, private_key const *priv);
 
+bool validate(public_key const *in);
+
+void action(public_key *out, public_key const *in, private_key const *priv);
+
 #endif

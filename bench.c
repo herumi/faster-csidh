@@ -19,7 +19,7 @@ static __inline__ uint64_t rdtsc(void)
     return lo | (uint64_t) hi << 32;
 }
 
-unsigned long its = 10000;
+unsigned long its = 1000;
 
 int main()
 {
