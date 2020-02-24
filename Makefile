@@ -1,7 +1,9 @@
 all:
 	@gcc \
+		-std=c99 -pedantic \
+		-march=native \
 		-Wall -Wextra \
-		-O0 -funroll-loops \
+		-O3 -funroll-loops \
 		rng.c \
 		u512.s fp.s \
 		mont.c \
@@ -23,8 +25,10 @@ debug:
 
 bench:
 	@gcc \
+		-std=c99 -pedantic \
+		-march=native \
 		-Wall -Wextra \
-		-O3 -funroll-loops \
+		-O3 \
 		rng.c \
 		u512.s fp.s \
 		mont.c \
