@@ -9,6 +9,7 @@
 #include "fp.h"
 #include "mont.h"
 #include "csidh.h"
+#include "mcl.h"
 
 #include <inttypes.h>
 
@@ -23,6 +24,10 @@ unsigned long its = 100;
 
 int main()
 {
+{
+    const char *pStr = "5326738796327623094747867617954605554069371494832722337612446642054009560026576537626892113026381253624626941643949444792662881241621373288942880288065659";
+	mcl_init(pStr);
+}
     clock_t t0, t1, time = 0;
     uint64_t c0, c1, cycles = 0;
 

@@ -10,6 +10,7 @@
 #include "fp.h"
 #include "mont.h"
 #include "csidh.h"
+#include "mcl.h"
 
 void u512_print(u512 const *x)
 {
@@ -26,6 +27,10 @@ void fp_print(fp const *x)
 
 int main()
 {
+{
+    const char *pStr = "5326738796327623094747867617954605554069371494832722337612446642054009560026576537626892113026381253624626941643949444792662881241621373288942880288065659";
+	mcl_init(pStr);
+}
     clock_t t0, t1;
 
     private_key priv_alice, priv_bob;
